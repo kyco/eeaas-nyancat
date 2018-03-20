@@ -1,6 +1,6 @@
 {
   "name": "eeaas-nyancat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nyancat",
   "main": "nyancat.js",
   "scripts": {
@@ -10,7 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/kyco/eeaas-nyancat.git"
   },
-  "keywords": ["eeaas", "eeaas-nyancat", "eeaas nyancat", "nyancat"],
+  "keywords": [
+    "eeaas",
+    "eeaas-nyancat",
+    "eeaas nyancat",
+    "nyancat"
+  ],
   "author": "Cornelius Weidmann <cornelius@kyco.io> (https://kyco.io)",
   "license": "MIT",
   "bugs": {
