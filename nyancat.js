@@ -1,23 +1,23 @@
-import "./nyancat.css";
-import $ from "jquery";
+import './nyancat.css';
+import $ from 'jquery';
 
 const NyanCat = {
-  name: "NyanCat",
+  name: 'NyanCat',
 
-  startTrigger: "nyan",
+  startTrigger: 'nyan',
 
-  stopTrigger: "esc",
+  stopTrigger: 'esc',
 
   start() {
     // Config
     window.nyancat = window.nyancat || {};
     window.nyancat.active = true;
-    $("body").append(`
+    $('body').append(`
       <div id="nyancat-wrapper">
         <div class="nyan"></div>
       </div>
     `);
-    window.nyancat.markup = document.getElementById("nyancat-wrapper");
+    window.nyancat.markup = document.getElementById('nyancat-wrapper');
 
     let px = 0;
     let py = 0;
@@ -25,10 +25,10 @@ const NyanCat = {
     let posX = 100;
     let posY = 100;
     let rainbow = null;
-    const nyan = $(".nyan");
+    const nyan = $('.nyan');
     const pilha = [];
     const altura = 800;
-    const largura = parseInt($("body").width(), 10);
+    const largura = parseInt($('body').width(), 10);
     const tamanhoTela = parseInt(largura / 9, 10);
 
     const getRandomInt = function(min, max) {
@@ -40,13 +40,13 @@ const NyanCat = {
       posY = e.pageY;
     };
 
-    $(document).on("mousemove", window.nyancat.mouseMove);
+    $(document).on('mousemove', window.nyancat.mouseMove);
 
     for (let i = 0; i < tamanhoTela; i++) {
-      const rain = $('<div class="rainbow"></div>').css("left", `${i * 9}px`);
-      $("#nyancat-wrapper").append(rain);
+      const rain = $('<div class="rainbow"></div>').css('left', `${i * 9}px`);
+      $('#nyancat-wrapper').append(rain);
     }
-    rainbow = $(".rainbow");
+    rainbow = $('.rainbow');
 
     const criarEstrela = function() {
       const rand = getRandomInt(3, 14);
@@ -57,12 +57,12 @@ const NyanCat = {
         left: `${largura - 10}px`,
         top: Math.floor(Math.random() * altura + 1),
         transition: `all ${tempoDeVida}s linear`,
-        transform: "translate(0px, 0px)"
+        transform: 'translate(0px, 0px)'
       });
-      $("#nyancat-wrapper").append(star);
+      $('#nyancat-wrapper').append(star);
 
       window.setTimeout(() => {
-        star.css("transform", `translate(-${largura}px, 0px)`);
+        star.css('transform', `translate(-${largura}px, 0px)`);
       }, getRandomInt(5, 10) * 10);
 
       window.setTimeout(() => {
@@ -95,7 +95,7 @@ const NyanCat = {
         }
         rainbow
           .eq(qnt - i)
-          .css("top", pilha[i] + am)
+          .css('top', pilha[i] + am)
           .show();
       }
     };
@@ -115,7 +115,7 @@ const NyanCat = {
 
     let frame = 0;
     window.nyancat.interval4 = window.setInterval(() => {
-      nyan.css("background-position", `${34 * frame}px`);
+      nyan.css('background-position', `${34 * frame}px`);
       frame++;
     }, 100);
   },
@@ -123,7 +123,7 @@ const NyanCat = {
   stop() {
     window.nyancat = window.nyancat || {};
     window.nyancat.active = false;
-    $(document).off("mousemove", window.nyancat.mouseMove);
+    $(document).off('mousemove', window.nyancat.mouseMove);
     window.clearInterval(window.nyancat.interval1);
     window.clearInterval(window.nyancat.interval2);
     window.clearInterval(window.nyancat.interval3);
