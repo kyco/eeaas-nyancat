@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/kyco/eeaas-nyancat.git"
   },
-  "keywords": ["eeaas-nyancat"],
+  "keywords": ["eeaas", "eeaas-nyancat", "eeaas nyancat", "nyancat"],
   "author": "Cornelius Weidmann <cornelius@kyco.io> (https://kyco.io)",
   "license": "MIT",
   "bugs": {
