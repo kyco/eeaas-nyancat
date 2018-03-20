@@ -1,6 +1,6 @@
 {
   "name": "eeaas-nyancat",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nyancat",
   "main": "index.js",
   "scripts": {
