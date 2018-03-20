@@ -1,4 +1,4 @@
-import './nyancat.css';
+import './style.css';
 
 const NyanCat = {
   name: 'NyanCat',
