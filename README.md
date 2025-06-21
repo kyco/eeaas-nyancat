@@ -1,4 +1,8 @@
-# Nyancat
+# DEPRECATED Nyancat
+
+> [!NOTE]
+> **This package has moved to: https://github.com/kyco/eeaas**
+
 
 This is an easter egg to be used with the "eeaas" package.
 
